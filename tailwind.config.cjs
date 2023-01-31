@@ -27,7 +27,25 @@ module.exports = {
     ],
   },
   theme: {
+    screens: {
+      ms: "320px",
+
+      mm: "375px",
+
+      ml: "425px",
+
+      sm: "640px",
+
+      md: "768px",
+
+      lg: "1024px",
+
+      xl: "1280px",
+
+      "2xl": "1536px",
+    },
     extend: {
+      fontFamily: { Rubik: ["Rubik", "sans-serif"] },
       backgroundImage: () => ({
         "gradient-radial-to-tr":
           "radial-gradient(115% 90% at 0% 100%, var(--tw-gradient-stops))",
@@ -40,30 +58,15 @@ module.exports = {
       }),
       fontFamily: { Roboto: ["Roboto", "sans-serif"] },
       colors: {
-        dawn: {
-          100: "#EF752E",
-          200: "#E23A29",
-          300: "#8D0C0F",
-        },
-        water: {
-          100: "#C9FEF5",
-          200: "#A8DEDC",
-          300: "#87BDC2",
-          400: "#0099B4",
-          500: "#026A88",
-          600: "#033B5C",
-        },
-        earth: {
-          100: "#52606F",
-          200: "#3E3E50",
-          300: "#6F5955",
-          400: "#323041",
-        },
-        fairy: {
-          100: "#207E78",
-          200: "#58847D",
-          300: "#22555C",
-          400: "#274746",
+        design: {
+          ModerateBlue: "#5457B6",
+          SoftRed: "#ED6468",
+          LightGrayishBlue: "#C3C4EF",
+          PaleRed: "#FFB8BB",
+          DarkBlue: "#324152",
+          GrayishBlue: "#67727E",
+          LighGray: "#EAECF1",
+          VeryLightGray: "#F5F6FA",
         },
       },
       keyframes: {

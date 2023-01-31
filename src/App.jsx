@@ -2,7 +2,7 @@ import "./App.css";
 
 //images
 
-import FooterButtonSection, { ReplyButton } from "./components/Buttons";
+import FooterButtonSection, { BottomReplyButton } from "./components/Buttons";
 import Card, { ReplyCard } from "./components/Card";
 import Header from "./components/Header";
 import PostContent from "./components/PostContent";
@@ -10,7 +10,7 @@ import PostContent from "./components/PostContent";
 function App() {
   return (
     <>
-      <div className="grid w-full grid-flow-row gap-12">
+      <div className="grid w-screen grid-flow-row gap-12">
         <Card />
         <ReplyCard />
         <Card />
