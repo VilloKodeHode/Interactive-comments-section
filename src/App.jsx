@@ -10,7 +10,7 @@ import PostContent from "./components/PostContent";
 function App() {
   return (
     <>
-      <div className="grid w-screen grid-flow-row gap-12">
+      <div className="grid w-screen grid-flow-row">
         <Card />
         <ReplyCard />
         <Card />

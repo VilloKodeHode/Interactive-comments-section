@@ -2,10 +2,10 @@ import PLUS from "./images/icon-plus.svg";
 import MINUS from "./images/icon-minus.svg";
 import REPLY from "./images/icon-reply.svg";
 
-const FooterButtonSection = () => {
+const FooterButtonSection = ({ likes, setLikes }) => {
   return (
     <div className="flex justify-between">
-      <BottomLikeButton />
+      <BottomLikeButton likes={likes} setLikes={setLikes} />
       <BottomReplyButton />
     </div>
   );
@@ -29,30 +29,32 @@ export const TopReplyButton = () => {
   );
 };
 
-export const BottomLikeButton = () => {
+export const BottomLikeButton = ({ likes, setLikes }) => {
   return (
     <div className="md:hidden flex text-design-ModerateBlue gap-4 p-2 rounded-xl bg-design-LighGray">
-      <button>
+      <button onClick={() => setLikes((prevLikes) => prevLikes + 1)}>
         <img src={PLUS} />
       </button>
-      <p className="font-semibold">12</p>
-      <button>
+      <p className="font-semibold h-5">{likes}</p>
+      <button onClick={() => setLikes((prevLikes) => prevLikes - 1)}>
         <img src={MINUS} />
       </button>
     </div>
   );
 };
 
-export const SideLikeButton = () => {
+export const SideLikeButton = ({ likes, setLikes }) => {
   return (
-    <div className="md:flex hidden flex-col justify-center items-center my-6 px-3 text-design-ModerateBlue gap-4 p-2 rounded-xl bg-design-LighGray">
-      <button>
-        <img src={PLUS} />
-      </button>
-      <p className="font-semibold">12</p>
-      <button>
-        <img src={MINUS} />
-      </button>
+    <div className="md:flex hidden flex-col justify-center items-center my-6">
+      <div className="px-3 text-design-ModerateBlue gap-4 p-2 rounded-xl bg-design-LighGray">
+        <button onClick={() => setLikes((prevLikes) => prevLikes + 1)}>
+          <img src={PLUS} />
+        </button>
+        <p className="font-semibold h-5">{likes}</p>
+        <button onClick={() => setLikes((prevLikes) => prevLikes - 1)}>
+          <img src={MINUS} />
+        </button>
+      </div>
     </div>
   );
 };
